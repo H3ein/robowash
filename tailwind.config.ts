@@ -123,6 +123,14 @@ export default {
 					'100%': {
 						backgroundPosition: '100% 50%'
 					}
+				},
+				'spin-slow': {
+					'0%': {
+						transform: 'rotate(0deg)'
+					},
+					'100%': {
+						transform: 'rotate(360deg)'
+					}
 				}
 			},
 			animation: {
@@ -130,7 +138,8 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.5s ease-out',
 				'pulse-slow': 'pulse-slow 3s infinite',
-				'water-flow': 'water-flow 10s linear infinite'
+				'water-flow': 'water-flow 10s linear infinite',
+				'spin-slow': 'spin-slow 12s linear infinite'
 			},
 			backgroundImage: {
 				'gradient-water': 'linear-gradient(90deg, #0EA5E9 0%, #0D9488 50%, #0EA5E9 100%)'
