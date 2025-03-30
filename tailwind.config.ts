@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -66,20 +65,27 @@ export default {
 				wash: {
 					blue: '#0EA5E9',
 					teal: '#0D9488',
-					light: '#F0FDFA',
+					light: '#EFF6FF',
 					dark: '#0F172A',
-					gray: '#94A3B8'
+					gray: '#94A3B8',
+					cream: '#F8FAFC',
+					accent: '#38BDF8',
+					subtle: '#E0F2FE'
 				},
 				occupancy: {
-					low: '#10B981',
-					medium: '#F59E0B',
-					high: '#EF4444'
+					low: 'var(--occupancy-low)',
+					medium: 'var(--occupancy-medium)',
+					high: 'var(--occupancy-high)',
+					'bg-low': 'var(--occupancy-bg-low)',
+					'bg-medium': 'var(--occupancy-bg-medium)',
+					'bg-high': 'var(--occupancy-bg-high)'
 				}
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
-				sm: 'calc(var(--radius) - 4px)'
+				sm: 'calc(var(--radius) - 4px)',
+				'2xl': '1rem'
 			},
 			keyframes: {
 				'accordion-down': {
@@ -110,10 +116,10 @@ export default {
 				},
 				'pulse-slow': {
 					'0%, 100%': {
-						opacity: 1
+						opacity: '1'
 					},
 					'50%': {
-						opacity: 0.7
+						opacity: '0.7'
 					}
 				},
 				'water-flow': {
@@ -131,18 +137,61 @@ export default {
 					'100%': {
 						transform: 'rotate(360deg)'
 					}
+				},
+				flow: {
+					'0%, 100%': { transform: 'translateX(-70%)' },
+					'50%': { transform: 'translateX(0%)' }
+				},
+				carWash: {
+					'0%': { transform: 'translateX(0%)' },
+					'20%': { transform: 'translateX(30%)' },
+					'40%': { transform: 'translateX(60%)' },
+					'60%': { transform: 'translateX(90%)' },
+					'80%': { transform: 'translateX(60%)' },
+					'100%': { transform: 'translateX(0%)' }
+				},
+				dropFall: {
+					'0%': { 
+						transform: 'translateY(-100%)',
+						opacity: '0' 
+					},
+					'50%': { 
+						transform: 'translateY(100%)',
+						opacity: '1' 
+					},
+					'100%': { 
+						transform: 'translateY(200%)',
+						opacity: '0' 
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.5s ease-out',
-				'pulse-slow': 'pulse-slow 3s infinite',
-				'water-flow': 'water-flow 10s linear infinite',
-				'spin-slow': 'spin-slow 12s linear infinite'
+				'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+				'water-flow': 'flow 5s ease-in-out infinite',
+				'spin-slow': 'spin 8s linear infinite',
+				'bounce': 'bounce 2s ease-in-out infinite',
+				'car-wash': 'carWash 10s ease-in-out infinite',
+				'drop-1': 'dropFall 1.5s ease-in infinite 0.2s',
+				'drop-2': 'dropFall 1.5s ease-in infinite 0.8s',
+				'drop-3': 'dropFall 1.5s ease-in infinite 1.3s',
 			},
 			backgroundImage: {
-				'gradient-water': 'linear-gradient(90deg, #0EA5E9 0%, #0D9488 50%, #0EA5E9 100%)'
+				'gradient-water': 'linear-gradient(90deg, #0EA5E9 0%, #0D9488 50%, #0EA5E9 100%)',
+				'gradient-light': 'linear-gradient(145deg, #EFF6FF 0%, #E0F2FE 100%)'
+			},
+			boxShadow: {
+				'card-hover': '0 10px 30px rgba(0, 0, 0, 0.15)',
+				'button-hover': '0 8px 25px rgba(14, 165, 233, 0.3)',
+				'soft': '0 4px 20px rgba(0, 0, 0, 0.08)'
+			},
+			transitionDuration: {
+				'300': '300ms',
+			},
+			scale: {
+				'102': '1.02',
 			}
 		}
 	},

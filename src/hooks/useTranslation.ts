@@ -1,4 +1,3 @@
-
 import { useContext } from 'react';
 import { LanguageContext, Language } from '@/context/LanguageContext';
 
@@ -49,6 +48,20 @@ const translations: TranslationType = {
     he: 'ביקורות'
   },
   
+  // Hero
+  'hero.title': {
+    en: 'Robotic Cleaning Technology',
+    tr: 'Robotik Temizleme Teknolojisi',
+    ru: 'Роботизированная Технология Очистки',
+    he: 'טכנולוגיית ניקוי רובוטית'
+  },
+  'hero.subtitle': {
+    en: 'Experience spotless results with our advanced automated cleaning technology!',
+    tr: 'Gelişmiş otomatik temizleme teknolojimiz ile lekesiz sonuçlar yaşayın!',
+    ru: 'Испытайте безупречные результаты с нашей передовой автоматизированной технологией очистки!',
+    he: 'התנסה בתוצאות מושלמות עם טכנולוגיית הניקוי האוטומטית המתקדמת שלנו!'
+  },
+  
   // Occupancy
   'occupancy.title': {
     en: 'Current Status',
@@ -56,11 +69,17 @@ const translations: TranslationType = {
     ru: 'Текущий Статус',
     he: 'סטטוס נוכחי'
   },
+  'occupancy.status': {
+    en: 'Status',
+    tr: 'Durum',
+    ru: 'Статус',
+    he: 'סטטוס'
+  },
   'occupancy.low': {
-    en: 'Not Busy',
-    tr: 'Yoğun Değil',
-    ru: 'Не занято',
-    he: 'לא עמוס'
+    en: 'Ready for You!',
+    tr: 'Sizin İçin Hazır!',
+    ru: 'Готов для Вас!',
+    he: 'מוכן עבורך!'
   },
   'occupancy.medium': {
     en: 'Moderately Busy',
@@ -69,15 +88,15 @@ const translations: TranslationType = {
     he: 'עמוס במידה בינונית'
   },
   'occupancy.high': {
-    en: 'Very Busy',
-    tr: 'Çok Yoğun',
-    ru: 'Очень занято',
-    he: 'עמוס מאוד'
+    en: 'Popular Right Now',
+    tr: 'Şu Anda Popüler',
+    ru: 'Сейчас Популярно',
+    he: 'פופולרי עכשיו'
   },
   'occupancy.estimated': {
-    en: 'Estimated wait time:',
+    en: 'Expected wait time:',
     tr: 'Tahmini bekleme süresi:',
-    ru: 'Примерное время ожидания:',
+    ru: 'Ожидаемое время ожидания:',
     he: 'זמן המתנה משוער:'
   },
   'occupancy.minutes': {
@@ -89,10 +108,22 @@ const translations: TranslationType = {
   
   // Services
   'services.title': {
-    en: 'Our Services',
-    tr: 'Hizmetlerimiz',
-    ru: 'Наши Услуги',
-    he: 'השירותים שלנו'
+    en: 'Our Robot Services',
+    tr: 'Robot Hizmetlerimiz',
+    ru: 'Наши Робот-Услуги',
+    he: 'שירותי הרובוט שלנו'
+  },
+  'services.startingAt': {
+    en: 'Starting at',
+    tr: 'Başlayan fiyat',
+    ru: 'Начиная с',
+    he: 'החל מ'
+  },
+  'services.book': {
+    en: 'Book',
+    tr: 'Randevu',
+    ru: 'Бронировать',
+    he: 'הזמן'
   },
   'services.basic.title': {
     en: 'Basic Wash',
@@ -101,10 +132,10 @@ const translations: TranslationType = {
     he: 'שטיפה בסיסית'
   },
   'services.basic.description': {
-    en: 'Exterior wash with foam and rinse',
-    tr: 'Köpük ve durulama ile dış yıkama',
-    ru: 'Наружная мойка с пеной и ополаскиванием',
-    he: 'שטיפה חיצונית עם קצף ושטיפה'
+    en: 'Automated exterior wash with eco-friendly foam',
+    tr: 'Çevre dostu köpük ile otomatik dış yıkama',
+    ru: 'Автоматизированная наружная мойка с экологичной пеной',
+    he: 'שטיפה חיצונית אוטומטית עם קצף ידידותי לסביבה'
   },
   'services.premium.title': {
     en: 'Premium Wash',
@@ -113,10 +144,10 @@ const translations: TranslationType = {
     he: 'שטיפה פרימיום'
   },
   'services.premium.description': {
-    en: 'Basic wash plus wax and tire shine',
-    tr: 'Temel yıkama artı cila ve lastik parlatma',
-    ru: 'Базовая мойка с воском и чернением шин',
-    he: 'שטיפה בסיסית בתוספת ווקס וצחצוח צמיגים'
+    en: 'Basic wash plus precision waxing and tire shine',
+    tr: 'Temel yıkama artı hassas cilalama ve lastik parlatma',
+    ru: 'Базовая мойка с точным нанесением воска и блеском шин',
+    he: 'שטיפה בסיסית בתוספת וקס מדויק וצחצוח צמיגים'
   },
   'services.deluxe.title': {
     en: 'Deluxe Wash',
@@ -125,116 +156,116 @@ const translations: TranslationType = {
     he: 'שטיפה דה-לוקס'
   },
   'services.deluxe.description': {
-    en: 'Premium wash plus interior cleaning',
-    tr: 'Premium yıkama artı iç temizlik',
-    ru: 'Премиум мойка с чисткой салона',
-    he: 'שטיפה פרימיום בתוספת ניקוי פנימי'
+    en: 'Premium wash plus automated interior cleaning',
+    tr: 'Premium yıkama artı otomatik iç temizlik',
+    ru: 'Премиум мойка с автоматизированной чисткой салона',
+    he: 'שטיפה פרימיום בתוספת ניקוי פנימי אוטומטי'
   },
   
   // Reservation
   'reservation.title': {
-    en: 'Book Your Wash',
-    tr: 'Yıkama Randevusu Al',
-    ru: 'Забронировать Мойку',
-    he: 'הזמן את השטיפה שלך'
+    en: 'Book Your Robo-Wash',
+    tr: 'Robo-Yıkama Randevusu Alın',
+    ru: 'Забронируйте Робо-Мойку',
+    he: 'הזמן את הרובו-שטיפה שלך'
   },
   'reservation.name': {
-    en: 'Full Name',
-    tr: 'Ad Soyad',
-    ru: 'Полное Имя',
-    he: 'שם מלא'
+    en: 'Your Name',
+    tr: 'Adınız',
+    ru: 'Ваше Имя',
+    he: 'השם שלך'
   },
   'reservation.email': {
-    en: 'Email',
-    tr: 'E-posta',
-    ru: 'Эл. почта',
-    he: 'אימייל'
+    en: 'Your Email',
+    tr: 'E-posta Adresiniz',
+    ru: 'Ваша Эл. почта',
+    he: 'האימייל שלך'
   },
   'reservation.phone': {
-    en: 'Phone Number',
-    tr: 'Telefon Numarası',
-    ru: 'Номер Телефона',
-    he: 'מספר טלפון'
+    en: 'Your Phone',
+    tr: 'Telefonunuz',
+    ru: 'Ваш Телефон',
+    he: 'הטלפון שלך'
   },
   'reservation.phoneHint': {
-    en: 'We will send a confirmation via SMS',
-    tr: 'SMS ile onay göndereceğiz',
-    ru: 'Мы отправим подтверждение по SMS',
-    he: 'נשלח אישור באמצעות SMS'
+    en: "We'll send you a friendly reminder",
+    tr: 'Size dostça bir hatırlatma göndereceğiz',
+    ru: 'Мы отправим вам дружеское напоминание',
+    he: 'נשלח לך תזכורת ידידותית'
   },
   'reservation.date': {
-    en: 'Date',
-    tr: 'Tarih',
-    ru: 'Дата',
-    he: 'תאריך'
+    en: 'Preferred Date',
+    tr: 'Tercih Edilen Tarih',
+    ru: 'Предпочтительная Дата',
+    he: 'תאריך מועדף'
   },
   'reservation.time': {
-    en: 'Time',
-    tr: 'Saat',
-    ru: 'Время',
-    he: 'שעה'
+    en: 'Preferred Time',
+    tr: 'Tercih Edilen Saat',
+    ru: 'Предпочтительное Время',
+    he: 'זמן מועדף'
   },
   'reservation.selectTime': {
-    en: 'Select time',
-    tr: 'Saat seçin',
+    en: 'Select a time',
+    tr: 'Bir saat seçin',
     ru: 'Выберите время',
-    he: 'בחר שעה'
+    he: 'בחר זמן'
   },
   'reservation.service': {
-    en: 'Service',
-    tr: 'Hizmet',
-    ru: 'Услуга',
-    he: 'שירות'
+    en: 'Choose Service',
+    tr: 'Hizmet Seçin',
+    ru: 'Выберите Услугу',
+    he: 'בחר שירות'
   },
   'reservation.selectService': {
-    en: 'Select service',
-    tr: 'Hizmet seçin',
+    en: 'Select a service',
+    tr: 'Bir hizmet seçin',
     ru: 'Выберите услугу',
     he: 'בחר שירות'
   },
   'reservation.termsAgree': {
-    en: 'I agree to the terms and conditions',
-    tr: 'Şartları ve koşulları kabul ediyorum',
-    ru: 'Я согласен с правилами и условиями',
-    he: 'אני מסכים לתנאים וההגבלות'
+    en: 'I agree to let robots clean my car',
+    tr: 'Robotların arabamı temizlemesine izin veriyorum',
+    ru: 'Я согласен, чтобы роботы мыли мою машину',
+    he: 'אני מסכים לאפשר לרובוטים לנקות את הרכב שלי'
   },
   'reservation.submit': {
-    en: 'Book Appointment',
-    tr: 'Randevu Al',
-    ru: 'Забронировать',
-    he: 'הזמן תור'
+    en: 'Schedule My Wash',
+    tr: 'Yıkamamı Programla',
+    ru: 'Запланировать Мойку',
+    he: 'תזמן את השטיפה שלי'
   },
   'reservation.processing': {
-    en: 'Processing...',
-    tr: 'İşleniyor...',
-    ru: 'Обработка...',
-    he: 'מעבד...'
+    en: 'Scheduling...',
+    tr: 'Programlanıyor...',
+    ru: 'Планирование...',
+    he: 'מתזמן...'
   },
   'reservation.success': {
-    en: 'Appointment booked successfully!',
-    tr: 'Randevu başarıyla alındı!',
-    ru: 'Запись успешно забронирована!',
-    he: 'התור נקבע בהצלחה!'
+    en: 'Awesome! Your wash is scheduled!',
+    tr: 'Harika! Yıkamanız programlandı!',
+    ru: 'Отлично! Ваша мойка запланирована!',
+    he: 'מעולה! השטיפה שלך מתוזמנת!'
   },
   
   // Reviews
   'reviews.title': {
-    en: 'Customer Reviews',
-    tr: 'Müşteri Yorumları',
-    ru: 'Отзывы Клиентов',
-    he: 'ביקורות לקוחות'
+    en: 'What Our Customers Say',
+    tr: 'Müşterilerimiz Ne Diyor',
+    ru: 'Что Говорят Наши Клиенты',
+    he: 'מה הלקוחות שלנו אומרים'
   },
   'reviews.leaveReview': {
-    en: 'Leave a Review',
-    tr: 'Yorum Bırakın',
-    ru: 'Оставить Отзыв',
-    he: 'השאר ביקורת'
+    en: 'Share Your Experience',
+    tr: 'Deneyiminizi Paylaşın',
+    ru: 'Поделитесь Своим Опытом',
+    he: 'שתף את החוויה שלך'
   },
   'reviews.rateExperience': {
-    en: 'Rate your experience',
-    tr: 'Deneyiminizi değerlendirin',
-    ru: 'Оцените ваш опыт',
-    he: 'דרג את החוויה שלך'
+    en: 'How was your robot wash?',
+    tr: 'Robot yıkamanız nasıldı?',
+    ru: 'Как прошла ваша роботизированная мойка?',
+    he: 'איך הייתה שטיפת הרובוט שלך?'
   },
   'reviews.name': {
     en: 'Your Name',
@@ -243,46 +274,46 @@ const translations: TranslationType = {
     he: 'השם שלך'
   },
   'reviews.comment': {
-    en: 'Your Comment',
-    tr: 'Yorumunuz',
-    ru: 'Ваш Комментарий',
-    he: 'התגובה שלך'
+    en: 'Your Feedback',
+    tr: 'Geri Bildiriminiz',
+    ru: 'Ваш Отзыв',
+    he: 'המשוב שלך'
   },
   'reviews.submit': {
-    en: 'Submit Review',
-    tr: 'Yorumu Gönder',
+    en: 'Submit Feedback',
+    tr: 'Geri Bildirim Gönder',
     ru: 'Отправить Отзыв',
-    he: 'שלח ביקורת'
+    he: 'שלח משוב'
   },
   'reviews.submitting': {
-    en: 'Submitting...',
+    en: 'Sending...',
     tr: 'Gönderiliyor...',
     ru: 'Отправка...',
     he: 'שולח...'
   },
   'reviews.thankYou': {
-    en: 'Thank you for your review!',
-    tr: 'Yorumunuz için teşekkürler!',
+    en: 'Thanks for your feedback!',
+    tr: 'Geri bildiriminiz için teşekkürler!',
     ru: 'Спасибо за ваш отзыв!',
-    he: 'תודה על הביקורת שלך!'
+    he: 'תודה על המשוב שלך!'
   },
   'reviews.submitted': {
-    en: 'Your review has been submitted successfully',
-    tr: 'Yorumunuz başarıyla gönderildi',
-    ru: 'Ваш отзыв успешно отправлен',
-    he: 'הביקורת שלך נשלחה בהצלחה'
+    en: 'Your feedback helps our robots improve!',
+    tr: 'Geri bildiriminiz robotlarımızın gelişmesine yardımcı oluyor!',
+    ru: 'Ваш отзыв помогает нашим роботам совершенствоваться!',
+    he: 'המשוב שלך עוזר לרובוטים שלנו להשתפר!'
   },
   'reviews.ratingRequired': {
-    en: 'Please select a rating',
-    tr: 'Lütfen bir değerlendirme seçin',
-    ru: 'Пожалуйста, выберите оценку',
-    he: 'אנא בחר דירוג'
+    en: 'Please rate your experience',
+    tr: 'Lütfen deneyiminizi değerlendirin',
+    ru: 'Пожалуйста, оцените ваш опыт',
+    he: 'אנא דרג את החוויה שלך'
   },
   'reviews.error': {
-    en: 'Failed to submit review. Please try again.',
-    tr: 'Yorum gönderimi başarısız. Lütfen tekrar deneyin.',
-    ru: 'Не удалось отправить отзыв. Пожалуйста, попробуйте еще раз.',
-    he: 'שליחת הביקורת נכשלה. אנא נסה שוב.'
+    en: 'Oops! Something went wrong. Please try again.',
+    tr: 'Hay aksi! Bir şeyler yanlış gitti. Lütfen tekrar deneyin.',
+    ru: 'Упс! Что-то пошло не так. Пожалуйста, попробуйте еще раз.',
+    he: 'אופס! משהו השתבש. אנא נסה שוב.'
   },
   
   // Location
@@ -293,22 +324,40 @@ const translations: TranslationType = {
     he: 'מצא אותנו'
   },
   'location.address': {
-    en: '123 Wash Street, City, Country',
-    tr: '123 Yıkama Caddesi, Şehir, Ülke',
-    ru: '123 Улица Мойки, Город, Страна',
-    he: '123 רחוב שטיפה, עיר, מדינה'
+    en: '123 Main Street, Anytown, USA',
+    tr: '123 Ana Cadde, Herhangi Bir Şehir, USA',
+    ru: '123 Главная Улица, Любой Город, США',
+    he: '123 רחוב ראשי, עיר כלשהי, ארה"ב'
   },
   'location.hours': {
-    en: 'Open 7 days a week: 8AM - 8PM',
-    tr: 'Haftanın 7 günü açık: 8:00 - 20:00',
-    ru: 'Открыто 7 дней в неделю: 8:00 - 20:00',
-    he: 'פתוח 7 ימים בשבוע: 8:00 - 20:00'
+    en: 'Open daily: 8am - 8pm',
+    tr: 'Her gün açık: 8:00 - 20:00',
+    ru: 'Открыто ежедневно: 8:00 - 20:00',
+    he: 'פתוח יומי: 8:00 - 20:00'
   },
   'location.directions': {
     en: 'Get Directions',
     tr: 'Yol Tarifi Al',
     ru: 'Получить Маршрут',
+    he: 'קבל הוראות'
+  },
+  'location.visitUs': {
+    en: 'Visit Our RoboWash',
+    tr: 'RoboWash\'ımızı Ziyaret Edin',
+    ru: 'Посетите Наш RoboWash',
+    he: 'בקר ב-RoboWash שלנו'
+  },
+  'location.getDirections': {
+    en: 'Get Directions',
+    tr: 'Yol Tarifi Al',
+    ru: 'Проложить Маршрут',
     he: 'קבל הוראות הגעה'
+  },
+  'location.viewLargerMap': {
+    en: 'View Larger Map',
+    tr: 'Daha Büyük Haritayı Görüntüle',
+    ru: 'Просмотреть Увеличенную Карту',
+    he: 'צפה במפה גדולה יותר'
   },
   
   // Footer
@@ -333,16 +382,16 @@ const translations: TranslationType = {
   
   // Admin
   'admin.title': {
-    en: 'Admin Panel',
-    tr: 'Yönetici Paneli',
-    ru: 'Панель Администратора',
-    he: 'פאנל ניהול'
+    en: 'RoboWash Control Center',
+    tr: 'RoboWash Kontrol Merkezi',
+    ru: 'Центр Управления RoboWash',
+    he: 'מרכז שליטה RoboWash'
   },
   'admin.status': {
-    en: 'Current Occupancy Status',
-    tr: 'Mevcut Doluluk Durumu',
-    ru: 'Текущий Статус Занятости',
-    he: 'סטטוס תפוסה נוכחי'
+    en: 'Robot Station Status',
+    tr: 'Robot İstasyonu Durumu',
+    ru: 'Статус Робот-Станции',
+    he: 'סטטוס תחנת רובוט'
   },
   'admin.update': {
     en: 'Update Status',
@@ -351,28 +400,28 @@ const translations: TranslationType = {
     he: 'עדכן סטטוס'
   },
   'admin.bookings': {
-    en: 'Upcoming Bookings',
+    en: 'Upcoming Appointments',
     tr: 'Yaklaşan Randevular',
-    ru: 'Предстоящие Бронирования',
-    he: 'הזמנות קרובות'
+    ru: 'Предстоящие Посещения',
+    he: 'פגישות קרובות'
   },
   'admin.login': {
-    en: 'Admin Login',
-    tr: 'Yönetici Girişi',
-    ru: 'Вход для Администратора',
-    he: 'כניסת מנהל'
+    en: 'Admin Access',
+    tr: 'Yönetici Erişimi',
+    ru: 'Доступ Администратора',
+    he: 'גישת מנהל'
   },
   'admin.password': {
-    en: 'Password',
-    tr: 'Şifre',
-    ru: 'Пароль',
-    he: 'סיסמה'
+    en: 'Access Code',
+    tr: 'Erişim Kodu',
+    ru: 'Код Доступа',
+    he: 'קוד גישה'
   },
   'admin.signin': {
-    en: 'Sign In',
-    tr: 'Giriş Yap',
-    ru: 'Войти',
-    he: 'התחבר'
+    en: 'Access System',
+    tr: 'Sisteme Eriş',
+    ru: 'Доступ к Системе',
+    he: 'גישה למערכת'
   }
 };
 
