@@ -7,6 +7,8 @@ import OccupancyStatus from '@/components/OccupancyStatus';
 import Map from '@/components/Map';
 import ServiceCard from '@/components/ServiceCard';
 import ReservationForm from '@/components/ReservationForm';
+import Reviews from '@/components/Reviews';
+import ReviewForm from '@/components/ReviewForm';
 import { Button } from '@/components/ui/button';
 import { Car, Droplets, Sparkles, Brush } from 'lucide-react';
 import { OccupancyLevel } from '@/components/OccupancyStatus';
@@ -92,20 +94,8 @@ const Index: React.FC = () => {
         </div>
       </section>
       
-      {/* Location Map Section */}
-      <section id="location" className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">{t('location.title')}</h2>
-            <div className="w-20 h-1 bg-wash-blue mx-auto"></div>
-          </div>
-          
-          <Map />
-        </div>
-      </section>
-      
       {/* Booking Section */}
-      <section id="book" className="py-16 bg-gray-50">
+      <section id="book" className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">{t('reservation.title')}</h2>
@@ -115,6 +105,34 @@ const Index: React.FC = () => {
           <div className="max-w-lg mx-auto">
             <ReservationForm />
           </div>
+        </div>
+      </section>
+      
+      {/* Reviews Section */}
+      <section id="reviews" className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">{t('reviews.title')}</h2>
+            <div className="w-20 h-1 bg-wash-blue mx-auto"></div>
+          </div>
+          
+          <Reviews />
+          
+          <div className="max-w-lg mx-auto">
+            <ReviewForm />
+          </div>
+        </div>
+      </section>
+      
+      {/* Location Map Section */}
+      <section id="location" className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">{t('location.title')}</h2>
+            <div className="w-20 h-1 bg-wash-blue mx-auto"></div>
+          </div>
+          
+          <Map />
         </div>
       </section>
       

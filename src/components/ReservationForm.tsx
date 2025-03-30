@@ -1,20 +1,19 @@
 
 import React, { useState } from 'react';
 import { useTranslation } from '@/hooks/useTranslation';
-import { Calendar } from 'lucide-react';
+import { Calendar, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useToast } from '@/hooks/use-toast';
+import { Checkbox } from '@/components/ui/checkbox';
 
 const ReservationForm: React.FC = () => {
   const { t } = useTranslation();
   const { toast } = useToast();
   
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
     phone: '',
     date: '',
     time: '',
@@ -38,7 +37,7 @@ const ReservationForm: React.FC = () => {
     
     // Simulate API call
     try {
-      await new Promise(resolve => setTimeout(resolve, 1500));
+      await new Promise(resolve => setTimeout(resolve, 1000));
       
       toast({
         title: t('reservation.success'),
@@ -47,8 +46,6 @@ const ReservationForm: React.FC = () => {
       
       // Reset form
       setFormData({
-        name: '',
-        email: '',
         phone: '',
         date: '',
         time: '',
@@ -84,40 +81,21 @@ const ReservationForm: React.FC = () => {
       
       <form onSubmit={handleSubmit} className="space-y-4">
         <div className="space-y-2">
-          <Label htmlFor="name">{t('reservation.name')}</Label>
+          <Label htmlFor="phone" className="flex items-center">
+            <Phone className="h-4 w-4 mr-2 text-wash-blue" />
+            {t('reservation.phone')}
+          </Label>
           <Input
-            id="name"
-            name="name"
-            value={formData.name}
+            id="phone"
+            name="phone"
+            type="tel"
+            value={formData.phone}
             onChange={handleChange}
+            placeholder="+1 (555) 123-4567"
+            className="text-lg"
             required
           />
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="space-y-2">
-            <Label htmlFor="email">{t('reservation.email')}</Label>
-            <Input
-              id="email"
-              name="email"
-              type="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          
-          <div className="space-y-2">
-            <Label htmlFor="phone">{t('reservation.phone')}</Label>
-            <Input
-              id="phone"
-              name="phone"
-              type="tel"
-              value={formData.phone}
-              onChange={handleChange}
-              required
-            />
-          </div>
+          <p className="text-xs text-gray-500">{t('reservation.phoneHint')}</p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -142,7 +120,7 @@ const ReservationForm: React.FC = () => {
               required
             >
               <SelectTrigger>
-                <SelectValue placeholder={t('reservation.time')} />
+                <SelectValue placeholder={t('reservation.selectTime')} />
               </SelectTrigger>
               <SelectContent>
                 {timeSlots.map((time, index) => (
@@ -163,7 +141,7 @@ const ReservationForm: React.FC = () => {
             required
           >
             <SelectTrigger>
-              <SelectValue placeholder={t('reservation.service')} />
+              <SelectValue placeholder={t('reservation.selectService')} />
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="basic">{t('services.basic.title')}</SelectItem>
@@ -173,12 +151,24 @@ const ReservationForm: React.FC = () => {
           </Select>
         </div>
         
+        <div className="flex items-start space-x-2 pt-2">
+          <Checkbox id="terms" />
+          <div className="grid gap-1.5 leading-none">
+            <label
+              htmlFor="terms"
+              className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+            >
+              {t('reservation.termsAgree')}
+            </label>
+          </div>
+        </div>
+        
         <Button 
           type="submit" 
-          className="w-full bg-wash-blue hover:bg-wash-teal"
+          className="w-full bg-wash-blue hover:bg-wash-teal text-lg py-6"
           disabled={isSubmitting}
         >
-          {isSubmitting ? 'Processing...' : t('reservation.submit')}
+          {isSubmitting ? t('reservation.processing') : t('reservation.submit')}
         </Button>
       </form>
     </div>

@@ -42,6 +42,12 @@ const translations: TranslationType = {
     ru: 'Админ',
     he: 'מנהל'
   },
+  'nav.reviews': {
+    en: 'Reviews',
+    tr: 'Yorumlar',
+    ru: 'Отзывы',
+    he: 'ביקורות'
+  },
   
   // Occupancy
   'occupancy.title': {
@@ -150,6 +156,12 @@ const translations: TranslationType = {
     ru: 'Номер Телефона',
     he: 'מספר טלפון'
   },
+  'reservation.phoneHint': {
+    en: 'We will send a confirmation via SMS',
+    tr: 'SMS ile onay göndereceğiz',
+    ru: 'Мы отправим подтверждение по SMS',
+    he: 'נשלח אישור באמצעות SMS'
+  },
   'reservation.date': {
     en: 'Date',
     tr: 'Tarih',
@@ -162,11 +174,29 @@ const translations: TranslationType = {
     ru: 'Время',
     he: 'שעה'
   },
+  'reservation.selectTime': {
+    en: 'Select time',
+    tr: 'Saat seçin',
+    ru: 'Выберите время',
+    he: 'בחר שעה'
+  },
   'reservation.service': {
     en: 'Service',
     tr: 'Hizmet',
     ru: 'Услуга',
     he: 'שירות'
+  },
+  'reservation.selectService': {
+    en: 'Select service',
+    tr: 'Hizmet seçin',
+    ru: 'Выберите услугу',
+    he: 'בחר שירות'
+  },
+  'reservation.termsAgree': {
+    en: 'I agree to the terms and conditions',
+    tr: 'Şartları ve koşulları kabul ediyorum',
+    ru: 'Я согласен с правилами и условиями',
+    he: 'אני מסכים לתנאים וההגבלות'
   },
   'reservation.submit': {
     en: 'Book Appointment',
@@ -174,11 +204,85 @@ const translations: TranslationType = {
     ru: 'Забронировать',
     he: 'הזמן תור'
   },
+  'reservation.processing': {
+    en: 'Processing...',
+    tr: 'İşleniyor...',
+    ru: 'Обработка...',
+    he: 'מעבד...'
+  },
   'reservation.success': {
     en: 'Appointment booked successfully!',
     tr: 'Randevu başarıyla alındı!',
     ru: 'Запись успешно забронирована!',
     he: 'התור נקבע בהצלחה!'
+  },
+  
+  // Reviews
+  'reviews.title': {
+    en: 'Customer Reviews',
+    tr: 'Müşteri Yorumları',
+    ru: 'Отзывы Клиентов',
+    he: 'ביקורות לקוחות'
+  },
+  'reviews.leaveReview': {
+    en: 'Leave a Review',
+    tr: 'Yorum Bırakın',
+    ru: 'Оставить Отзыв',
+    he: 'השאר ביקורת'
+  },
+  'reviews.rateExperience': {
+    en: 'Rate your experience',
+    tr: 'Deneyiminizi değerlendirin',
+    ru: 'Оцените ваш опыт',
+    he: 'דרג את החוויה שלך'
+  },
+  'reviews.name': {
+    en: 'Your Name',
+    tr: 'Adınız',
+    ru: 'Ваше Имя',
+    he: 'השם שלך'
+  },
+  'reviews.comment': {
+    en: 'Your Comment',
+    tr: 'Yorumunuz',
+    ru: 'Ваш Комментарий',
+    he: 'התגובה שלך'
+  },
+  'reviews.submit': {
+    en: 'Submit Review',
+    tr: 'Yorumu Gönder',
+    ru: 'Отправить Отзыв',
+    he: 'שלח ביקורת'
+  },
+  'reviews.submitting': {
+    en: 'Submitting...',
+    tr: 'Gönderiliyor...',
+    ru: 'Отправка...',
+    he: 'שולח...'
+  },
+  'reviews.thankYou': {
+    en: 'Thank you for your review!',
+    tr: 'Yorumunuz için teşekkürler!',
+    ru: 'Спасибо за ваш отзыв!',
+    he: 'תודה על הביקורת שלך!'
+  },
+  'reviews.submitted': {
+    en: 'Your review has been submitted successfully',
+    tr: 'Yorumunuz başarıyla gönderildi',
+    ru: 'Ваш отзыв успешно отправлен',
+    he: 'הביקורת שלך נשלחה בהצלחה'
+  },
+  'reviews.ratingRequired': {
+    en: 'Please select a rating',
+    tr: 'Lütfen bir değerlendirme seçin',
+    ru: 'Пожалуйста, выберите оценку',
+    he: 'אנא בחר דירוג'
+  },
+  'reviews.error': {
+    en: 'Failed to submit review. Please try again.',
+    tr: 'Yorum gönderimi başarısız. Lütfen tekrar deneyin.',
+    ru: 'Не удалось отправить отзыв. Пожалуйста, попробуйте еще раз.',
+    he: 'שליחת הביקורת נכשלה. אנא נסה שוב.'
   },
   
   // Location
