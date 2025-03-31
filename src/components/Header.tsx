@@ -8,7 +8,6 @@ import { Button } from '@/components/ui/button';
 import { 
   Menu, 
   X, 
-  CircuitBoard, 
   Home, 
   Sparkles, 
   MapPin, 
@@ -55,7 +54,7 @@ const Header: React.FC = () => {
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled || isMobileMenuOpen 
-          ? 'bg-[var(--bg-primary)]/98 backdrop-blur-md shadow-lg' 
+          ? 'bg-white/98 backdrop-blur-md shadow-md' 
           : 'bg-transparent'
       }`}
     >
@@ -66,23 +65,20 @@ const Header: React.FC = () => {
             className="flex items-center gap-3 group"
             onClick={(e) => handleSmoothScroll(e, '/')}
           >
-            <div className="bg-gradient-to-r from-robowash-orange to-robowash-red rounded-full p-2 relative overflow-hidden shadow-md group-hover:shadow-lg transition-all">
-              <div className="absolute inset-0 bg-black/10 flex items-center justify-center">
-                <CircuitBoard className="h-10 w-10 text-white/10" />
-              </div>
+            <div className="bg-amber-400 rounded-full p-2 relative overflow-hidden shadow-md group-hover:shadow-lg transition-all">
               <div className="relative flex items-center justify-center">
-                <Smile className="h-8 w-8 text-robowash-gold" />
+                <Smile className="h-8 w-8 text-white" />
               </div>
             </div>
             <div className="flex flex-col">
-              <span className="font-bold text-xl md:text-2xl bg-gradient-to-r from-robowash-orange to-robowash-red bg-clip-text text-transparent leading-none group-hover:from-robowash-gold group-hover:to-robowash-orange transition-colors">
+              <span className="font-bold text-xl md:text-2xl text-amber-500 leading-none group-hover:text-amber-600 transition-colors">
                 RoboWash
               </span>
-              <span className="text-xs text-[var(--text-secondary)]">Smart Automated Cleaning</span>
+              <span className="text-xs text-gray-500">Smart Automated Cleaning</span>
             </div>
           </Link>
 
-          <nav className="hidden md:flex items-center gap-4">
+          <nav className="hidden md:flex items-center gap-1">
             {navLinks.map((link, index) => {
               const active = isLinkActive(link.href);
               return (
@@ -91,18 +87,18 @@ const Header: React.FC = () => {
                   to={link.href}
                   aria-current={active ? 'page' : undefined}
                   onClick={(e) => handleSmoothScroll(e, link.href)}
-                  className={`flex items-center gap-2 px-4 py-2.5 rounded-lg font-medium
-                   hover:bg-[var(--bg-secondary)] text-[var(--text-primary)] hover:text-robowash-orange 
+                  className={`flex items-center gap-2 px-3 py-2 rounded-lg font-medium
+                   hover:bg-gray-50 text-gray-700 hover:text-amber-500 
                    transition-all relative group ${
-                    active ? 'text-robowash-orange bg-[var(--bg-secondary)]/70 shadow-sm' : ''
+                    active ? 'text-amber-500 bg-amber-50 shadow-sm' : ''
                   }`}
                 >
-                  <span className={`${active ? 'text-robowash-orange' : 'text-robowash-orange/70 group-hover:text-robowash-orange'}`}>
+                  <span className={`${active ? 'text-amber-500' : 'text-amber-400 group-hover:text-amber-500'}`}>
                     {link.icon}
                   </span>
                   <span>{link.label}</span>
                   {active && (
-                    <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-robowash-orange" />
+                    <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-amber-500" />
                   )}
                 </Link>
               );
@@ -119,13 +115,13 @@ const Header: React.FC = () => {
               size="icon"
               aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
               aria-expanded={isMobileMenuOpen}
-              className="md:hidden text-[var(--text-primary)] hover:bg-[var(--bg-secondary)] border-robowash-orange/20 hover:border-robowash-orange"
+              className="md:hidden text-gray-700 hover:bg-gray-50 border-gray-200 hover:border-amber-500"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               {isMobileMenuOpen ? (
-                <X className="h-5 w-5 text-robowash-orange" />
+                <X className="h-5 w-5 text-amber-500" />
               ) : (
-                <Menu className="h-5 w-5 text-robowash-orange" />
+                <Menu className="h-5 w-5 text-amber-500" />
               )}
             </Button>
           </div>
@@ -133,9 +129,9 @@ const Header: React.FC = () => {
       </div>
 
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-[var(--bg-primary)]/98 backdrop-blur-md animate-in border-t border-[var(--bg-tertiary)] shadow-lg">
+        <div className="md:hidden bg-white/98 backdrop-blur-md animate-in border-t border-gray-100 shadow-lg">
           <div className="container mx-auto px-4 py-5">
-            <nav className="flex flex-col gap-3">
+            <nav className="flex flex-col gap-2">
               {navLinks.map((link, index) => {
                 const active = isLinkActive(link.href);
                 return (
@@ -148,21 +144,21 @@ const Header: React.FC = () => {
                       setIsMobileMenuOpen(false);
                     }}
                     className={`flex items-center gap-3 px-4 py-3 rounded-lg
-                      hover:bg-[var(--bg-secondary)] text-[var(--text-primary)] transition-all
+                      hover:bg-gray-50 text-gray-700 transition-all
                       active:scale-[0.98] ${
                       active
-                        ? 'font-medium text-robowash-orange bg-[var(--bg-secondary)]/70 shadow-sm' 
+                        ? 'font-medium text-amber-500 bg-amber-50 shadow-sm' 
                         : ''
                     }`}
                   >
-                    <span className={`text-robowash-orange ${active ? '' : 'opacity-70'}`}>
+                    <span className={`text-amber-500 ${active ? '' : 'opacity-70'}`}>
                       {link.icon}
                     </span>
                     <span className="text-base">{link.label}</span>
                   </Link>
                 );
               })}
-              <div className="pt-4 mt-2 border-t border-[var(--bg-tertiary)] flex justify-center">
+              <div className="pt-4 mt-2 border-t border-gray-100 flex justify-center">
                 <LanguageSwitcher />
               </div>
             </nav>

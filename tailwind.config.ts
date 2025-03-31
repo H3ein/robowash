@@ -64,21 +64,22 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				wash: {
-					blue: '#38BDF8',
-					teal: '#0D9488',
-					light: '#FFF7ED',
-					dark: '#7C2D12',
-					gray: '#94A3B8',
-					cream: '#FEF9F5',
-					accent: '#F97316',
-					subtle: '#FFEDD5'
+					amber: '#F59E0B',
+					'amber-light': '#FCD34D',
+					'amber-dark': '#D97706',
+					light: '#FFFFFF',
+					dark: '#111827',
+					gray: '#6B7280',
+					cream: '#FEFAF0',
+					accent: '#F59E0B',
+					subtle: '#FEF3C7'
 				},
 				robowash: {
-					gold: '#FBBF24',
+					gold: '#F59E0B',
 					orange: '#F97316',
-					red: '#B91C1C',
-					light: '#FEF9F5',
-					dark: '#7C2D12'
+					red: '#EF4444',
+					light: '#FFFFFF',
+					dark: '#111827'
 				},
 				occupancy: {
 					low: 'var(--occupancy-low)',
@@ -127,7 +128,7 @@ export default {
 						opacity: '1'
 					},
 					'50%': {
-						opacity: '0.7'
+						opacity: '0.8'
 					}
 				},
 				'water-flow': {
@@ -205,15 +206,15 @@ export default {
 				'bounce-slow': 'bounce 3s ease-in-out infinite',
 			},
 			backgroundImage: {
-				'gradient-water': 'linear-gradient(90deg, #F97316 0%, #FBBF24 50%, #F97316 100%)',
-				'gradient-light': 'linear-gradient(145deg, #FEF9F5 0%, #FFF7ED 100%)',
-				'gradient-gold': 'linear-gradient(90deg, #B45309 0%, #FBBF24 50%, #92400E 100%)',
+				'gradient-amber': 'linear-gradient(90deg, #F59E0B 0%, #FCD34D 50%, #F59E0B 100%)',
+				'gradient-light': 'linear-gradient(145deg, #FFFFFF 0%, #F9FAFB 100%)',
+				'gradient-gold': 'linear-gradient(90deg, #D97706 0%, #F59E0B 50%, #D97706 100%)',
 			},
 			boxShadow: {
-				'card-hover': '0 10px 30px rgba(249, 115, 22, 0.2)',
-				'button-hover': '0 8px 25px rgba(249, 115, 22, 0.25)',
-				'soft': '0 4px 20px rgba(249, 115, 22, 0.1)',
-				'gold': '0 5px 15px rgba(251, 191, 36, 0.3)'
+				'card-hover': '0 10px 30px rgba(245, 158, 11, 0.15)',
+				'button-hover': '0 8px 25px rgba(245, 158, 11, 0.2)',
+				'soft': '0 4px 20px rgba(245, 158, 11, 0.1)',
+				'gold': '0 5px 15px rgba(245, 158, 11, 0.2)'
 			},
 			transitionDuration: {
 				'300': '300ms',
