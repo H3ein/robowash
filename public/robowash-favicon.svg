@@ -11,24 +11,11 @@
   <circle cx="128" cy="256" r="16" fill="white" fill-opacity="0.1" />
   <circle cx="384" cy="256" r="16" fill="white" fill-opacity="0.1" />
   
-  <!-- Car silhouette -->
-  <path d="M320 280C320 293.25 309.25 304 296 304H216C202.75 304 192 293.25 192 280V256H320V280Z" fill="white" />
-  <path d="M336 240H176L192 200H320L336 240Z" fill="white" />
-  <circle cx="208" cy="280" r="16" fill="#F97316" />
-  <circle cx="304" cy="280" r="16" fill="#F97316" />
-  
-  <!-- Water droplets -->
-  <path d="M368 216C368 229.25 357.25 240 344 240C330.75 240 320 229.25 320 216C320 192 344 168 344 168C344 168 368 192 368 216Z" fill="#38BDF8" />
-  <path d="M192 216C192 229.25 181.25 240 168 240C154.75 240 144 229.25 144 216C144 192 168 168 168 168C168 168 192 192 192 216Z" fill="#38BDF8" />
-  
-  <!-- Robot elements with smiling face -->
-  <rect x="232" y="184" width="48" height="24" rx="4" fill="#0F172A" />
-  
   <!-- Smiling face -->
-  <circle cx="256" cy="220" r="32" fill="#FBBF24" />
-  <path d="M240 215C243.314 215 246 212.314 246 209C246 205.686 243.314 203 240 203C236.686 203 234 205.686 234 209C234 212.314 236.686 215 240 215Z" fill="#0F172A" />
-  <path d="M272 215C275.314 215 278 212.314 278 209C278 205.686 275.314 203 272 203C268.686 203 266 205.686 266 209C266 212.314 268.686 215 272 215Z" fill="#0F172A" />
-  <path d="M240 230C248 238 264 238 272 230" stroke="#0F172A" stroke-width="4" stroke-linecap="round" />
+  <circle cx="256" cy="256" r="128" fill="#FBBF24" />
+  <path d="M196 220C203 220 208 214 208 207C208 200 203 194 196 194C189 194 184 200 184 207C184 214 189 220 196 220Z" fill="#B91C1C" />
+  <path d="M316 220C323 220 328 214 328 207C328 200 323 194 316 194C309 194 304 200 304 207C304 214 309 220 316 220Z" fill="#B91C1C" />
+  <path d="M196 296C228 328 284 328 316 296" stroke="#B91C1C" stroke-width="12" stroke-linecap="round" />
   
   <!-- Define the gradient for the background -->
   <defs>

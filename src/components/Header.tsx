@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from '@/hooks/useTranslation';
@@ -6,10 +5,8 @@ import { useNavigation } from '@/hooks/useNavigation';
 import LanguageSwitcher from './LanguageSwitcher';
 import { Button } from '@/components/ui/button';
 import { 
-  Car, 
   Menu, 
   X, 
-  Droplets, 
   CircuitBoard, 
   Home, 
   Sparkles, 
@@ -37,7 +34,6 @@ const Header: React.FC = () => {
     };
   }, []);
 
-  // Close mobile menu when route changes
   useEffect(() => {
     setIsMobileMenuOpen(false);
   }, [location]);
@@ -50,7 +46,6 @@ const Header: React.FC = () => {
     { href: '/admin', label: t('nav.admin'), icon: <ShieldCheck className="h-4 w-4" /> }
   ];
 
-  // Use the shared activeLink state
   const isLinkActive = (href: string) => {
     return href === activeLink;
   };
@@ -65,7 +60,6 @@ const Header: React.FC = () => {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
           <Link 
             to="/" 
             className="flex items-center gap-3 group"
@@ -76,8 +70,7 @@ const Header: React.FC = () => {
                 <CircuitBoard className="h-10 w-10 text-white/10" />
               </div>
               <div className="relative flex items-center justify-center">
-                <Car className="h-6 w-6 text-white" />
-                <Smile className="h-6 w-6 text-robowash-gold absolute -right-1 -bottom-1 animate-bounce-slow" />
+                <Smile className="h-8 w-8 text-robowash-gold" />
               </div>
             </div>
             <div className="flex flex-col">
@@ -88,7 +81,6 @@ const Header: React.FC = () => {
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-4">
             {navLinks.map((link, index) => {
               const active = isLinkActive(link.href);
@@ -116,7 +108,6 @@ const Header: React.FC = () => {
             })}
           </nav>
 
-          {/* Language and Mobile Menu Toggle */}
           <div className="flex items-center gap-3">
             <div className="hidden md:block">
               <LanguageSwitcher />
@@ -140,7 +131,6 @@ const Header: React.FC = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden bg-[var(--bg-primary)]/98 backdrop-blur-md animate-in border-t border-[var(--bg-tertiary)] shadow-lg">
           <div className="container mx-auto px-4 py-5">

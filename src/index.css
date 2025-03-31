@@ -151,36 +151,13 @@ html {
   box-shadow: 0 4px 20px rgba(249, 115, 22, 0.1);
 }
 
-/* Gold glint animation */
-@keyframes goldGlint {
+@keyframes water-flow {
   0%, 100% {
-    opacity: 0.3;
+    background-position: 0% 50%;
   }
   50% {
-    opacity: 1;
+    background-position: 100% 50%;
   }
-}
-
-.gold-glint {
-  position: relative;
-  overflow: hidden;
-}
-
-.gold-glint::after {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(
-    45deg,
-    transparent 45%,
-    rgba(251, 191, 36, 0.8) 50%,
-    transparent 55%
-  );
-  animation: goldGlint 3s infinite;
-  pointer-events: none;
 }
 
 /* Warm glow effect */

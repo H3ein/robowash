@@ -1,6 +1,7 @@
+
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from '@/hooks/useTranslation';
-import { ArrowDown, ArrowRight, ArrowUp, Clock, Car, Droplets } from 'lucide-react';
+import { ArrowDown, ArrowRight, ArrowUp, Clock, Car, Droplets, Smile } from 'lucide-react';
 
 export type OccupancyLevel = 'low' | 'medium' | 'high';
 
@@ -98,10 +99,10 @@ const OccupancyStatus: React.FC<OccupancyStatusProps> = ({ level }) => {
         {/* Header with floating clock icon */}
         <div className="flex justify-between items-center mb-9">
           <div className="flex flex-col">
-            <h3 className="text-[26px] font-bold tracking-tight bg-gradient-to-r from-wash-blue to-wash-teal bg-clip-text text-transparent">
+            <h3 className="text-[26px] font-bold tracking-tight bg-gradient-to-r from-robowash-orange to-robowash-red bg-clip-text text-transparent">
               {t('occupancy.title')}
             </h3>
-            <div className="h-1 w-16 bg-gradient-to-r from-wash-blue to-wash-teal mt-2 rounded-full"></div>
+            <div className="h-1 w-16 bg-gradient-to-r from-robowash-orange to-robowash-red mt-2 rounded-full"></div>
           </div>
           
           <div className={`bg-gradient-to-br ${gradientFrom} ${gradientTo} p-3 rounded-full shadow-lg transform transition-all duration-500 hover:shadow-xl hover:scale-110 hover:rotate-12`}>
@@ -131,20 +132,20 @@ const OccupancyStatus: React.FC<OccupancyStatusProps> = ({ level }) => {
               )}
             </div>
             
-            {/* Main icon with drop */}
+            {/* Main icon with drop - Using Car and Smile icon */}
             <div className="relative z-10 flex items-center justify-center transform transition-all duration-700 group-hover:scale-110">
-              <Car className="h-20 w-20 text-white drop-shadow-lg" />
+              <div className="relative">
+                <Car className="h-20 w-20 text-white drop-shadow-lg" />
+                <Smile className="h-12 w-12 text-robowash-gold absolute -top-5 -right-3 drop-shadow-lg" />
+              </div>
               <Droplets 
-                className="h-9 w-9 text-white/90 absolute -top-8 -right-1 animate-bounce drop-shadow-lg" 
+                className="h-9 w-9 text-white/90 absolute -top-6 right-0 drop-shadow-lg" 
                 style={{
                   filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1))',
                   animation: 'bounce 2s infinite ease-in-out'
                 }}
               />
             </div>
-            
-            {/* Shine effect on hover */}
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-all duration-1000 ease-in-out"></div>
           </div>
         </div>
         

@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useTranslation } from '@/hooks/useTranslation';
 import Header from '@/components/Header';
@@ -10,7 +9,7 @@ import ReservationForm from '@/components/ReservationForm';
 import Reviews from '@/components/Reviews';
 import ReviewForm from '@/components/ReviewForm';
 import { Button } from '@/components/ui/button';
-import { Car, Droplets, Sparkles, Brush, Smile } from 'lucide-react';
+import { Droplets, Sparkles, Brush, Smile } from 'lucide-react';
 import { OccupancyLevel } from '@/components/OccupancyStatus';
 import { useNavigation } from '@/hooks/useNavigation';
 
@@ -29,7 +28,7 @@ const Index: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="text-center md:text-left animate-in">
               <div className="flex items-center justify-center md:justify-start mb-4">
-                <Smile className="h-10 w-10 text-robowash-gold mr-3 animate-bounce-slow" />
+                <Smile className="h-12 w-12 text-robowash-gold mr-3" />
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-robowash-orange to-robowash-red bg-clip-text text-transparent leading-tight">
                   RoboWash
                 </h1>
@@ -63,11 +62,9 @@ const Index: React.FC = () => {
               </div>
             </div>
             
-            {/* Enlarged Current Status with gold shimmer effect */}
-            <div className="flex justify-center animate-in scale-110 transform">
-              <div className="gold-glint">
-                <OccupancyStatus level={occupancyLevel} />
-              </div>
+            {/* Current Status without yellow animation */}
+            <div className="flex justify-center animate-in">
+              <OccupancyStatus level={occupancyLevel} />
             </div>
           </div>
         </div>
