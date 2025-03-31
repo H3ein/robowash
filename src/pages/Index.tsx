@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { useTranslation } from '@/hooks/useTranslation';
 import Header from '@/components/Header';
@@ -22,7 +23,7 @@ const Index: React.FC = () => {
     <div className="min-h-screen flex flex-col bg-[var(--bg-primary)]">
       <Header />
       
-      {/* Hero Section */}
+      {/* Hero Section with refined design */}
       <section className="pt-24 md:pt-32 pb-16 md:pb-24 bg-gradient-to-b from-[var(--bg-primary)] to-[var(--bg-secondary)]">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -62,7 +63,7 @@ const Index: React.FC = () => {
               </div>
             </div>
             
-            {/* Current Status without yellow animation */}
+            {/* Current Status display */}
             <div className="flex justify-center animate-in">
               <OccupancyStatus level={occupancyLevel} />
             </div>
@@ -70,7 +71,7 @@ const Index: React.FC = () => {
         </div>
       </section>
       
-      {/* Services Section */}
+      {/* Services Section with refined design */}
       <section id="services" className="py-16 bg-gradient-to-b from-[var(--bg-secondary)] to-[var(--bg-primary)]">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 animate-in">
@@ -103,7 +104,7 @@ const Index: React.FC = () => {
         </div>
       </section>
       
-      {/* Booking Section */}
+      {/* Booking Section with refined design */}
       <section id="book" className="py-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-[var(--bg-primary)] to-[var(--bg-secondary)] z-0"></div>
         <div className="container mx-auto px-4 relative z-10">
@@ -118,7 +119,7 @@ const Index: React.FC = () => {
         </div>
       </section>
       
-      {/* Reviews Section */}
+      {/* Reviews Section with refined design */}
       <section id="reviews" className="py-16 bg-gradient-to-b from-[var(--bg-secondary)] to-[var(--bg-primary)] relative overflow-hidden">
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-12 animate-in">
@@ -138,7 +139,7 @@ const Index: React.FC = () => {
         </div>
       </section>
       
-      {/* Location Map Section */}
+      {/* Location Map Section with refined design */}
       <section id="location" className="py-16 bg-gradient-to-b from-[var(--bg-primary)] to-[var(--bg-secondary)]">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 animate-in">
