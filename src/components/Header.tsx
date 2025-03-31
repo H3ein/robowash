@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from '@/hooks/useTranslation';
@@ -14,7 +15,8 @@ import {
   Sparkles, 
   MapPin, 
   CalendarCheck, 
-  ShieldCheck 
+  ShieldCheck,
+  Smile 
 } from 'lucide-react';
 
 const Header: React.FC = () => {
@@ -69,17 +71,17 @@ const Header: React.FC = () => {
             className="flex items-center gap-3 group"
             onClick={(e) => handleSmoothScroll(e, '/')}
           >
-            <div className="bg-gradient-to-r from-wash-blue to-wash-teal rounded-full p-2 relative overflow-hidden shadow-md group-hover:shadow-lg transition-all">
+            <div className="bg-gradient-to-r from-robowash-orange to-robowash-red rounded-full p-2 relative overflow-hidden shadow-md group-hover:shadow-lg transition-all">
               <div className="absolute inset-0 bg-black/10 flex items-center justify-center">
                 <CircuitBoard className="h-10 w-10 text-white/10" />
               </div>
               <div className="relative flex items-center justify-center">
                 <Car className="h-6 w-6 text-white" />
-                <Droplets className="h-3 w-3 text-white absolute -top-1 right-0" />
+                <Smile className="h-6 w-6 text-robowash-gold absolute -right-1 -bottom-1 animate-bounce-slow" />
               </div>
             </div>
             <div className="flex flex-col">
-              <span className="font-bold text-xl md:text-2xl text-[var(--text-primary)] leading-none group-hover:text-wash-blue transition-colors">
+              <span className="font-bold text-xl md:text-2xl bg-gradient-to-r from-robowash-orange to-robowash-red bg-clip-text text-transparent leading-none group-hover:from-robowash-gold group-hover:to-robowash-orange transition-colors">
                 RoboWash
               </span>
               <span className="text-xs text-[var(--text-secondary)]">Smart Automated Cleaning</span>
@@ -97,17 +99,17 @@ const Header: React.FC = () => {
                   aria-current={active ? 'page' : undefined}
                   onClick={(e) => handleSmoothScroll(e, link.href)}
                   className={`flex items-center gap-2 px-4 py-2.5 rounded-lg font-medium
-                   hover:bg-[var(--bg-secondary)] text-[var(--text-primary)] hover:text-wash-blue 
+                   hover:bg-[var(--bg-secondary)] text-[var(--text-primary)] hover:text-robowash-orange 
                    transition-all relative group ${
-                    active ? 'text-wash-blue bg-[var(--bg-secondary)]/70 shadow-sm' : ''
+                    active ? 'text-robowash-orange bg-[var(--bg-secondary)]/70 shadow-sm' : ''
                   }`}
                 >
-                  <span className={`${active ? 'text-wash-blue' : 'text-wash-blue/70 group-hover:text-wash-blue'}`}>
+                  <span className={`${active ? 'text-robowash-orange' : 'text-robowash-orange/70 group-hover:text-robowash-orange'}`}>
                     {link.icon}
                   </span>
                   <span>{link.label}</span>
                   {active && (
-                    <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-wash-blue" />
+                    <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-robowash-orange" />
                   )}
                 </Link>
               );
@@ -125,13 +127,13 @@ const Header: React.FC = () => {
               size="icon"
               aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
               aria-expanded={isMobileMenuOpen}
-              className="md:hidden text-[var(--text-primary)] hover:bg-[var(--bg-secondary)] border-wash-blue/20 hover:border-wash-blue"
+              className="md:hidden text-[var(--text-primary)] hover:bg-[var(--bg-secondary)] border-robowash-orange/20 hover:border-robowash-orange"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               {isMobileMenuOpen ? (
-                <X className="h-5 w-5 text-wash-blue" />
+                <X className="h-5 w-5 text-robowash-orange" />
               ) : (
-                <Menu className="h-5 w-5 text-wash-blue" />
+                <Menu className="h-5 w-5 text-robowash-orange" />
               )}
             </Button>
           </div>
@@ -158,11 +160,11 @@ const Header: React.FC = () => {
                       hover:bg-[var(--bg-secondary)] text-[var(--text-primary)] transition-all
                       active:scale-[0.98] ${
                       active
-                        ? 'font-medium text-wash-blue bg-[var(--bg-secondary)]/70 shadow-sm' 
+                        ? 'font-medium text-robowash-orange bg-[var(--bg-secondary)]/70 shadow-sm' 
                         : ''
                     }`}
                   >
-                    <span className={`text-wash-blue ${active ? '' : 'opacity-70'}`}>
+                    <span className={`text-robowash-orange ${active ? '' : 'opacity-70'}`}>
                       {link.icon}
                     </span>
                     <span className="text-base">{link.label}</span>

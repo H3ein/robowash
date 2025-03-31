@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -63,14 +64,21 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				wash: {
-					blue: '#0EA5E9',
+					blue: '#38BDF8',
 					teal: '#0D9488',
-					light: '#EFF6FF',
-					dark: '#0F172A',
+					light: '#FFF7ED',
+					dark: '#7C2D12',
 					gray: '#94A3B8',
-					cream: '#F8FAFC',
-					accent: '#38BDF8',
-					subtle: '#E0F2FE'
+					cream: '#FEF9F5',
+					accent: '#F97316',
+					subtle: '#FFEDD5'
+				},
+				robowash: {
+					gold: '#FBBF24',
+					orange: '#F97316',
+					red: '#B91C1C',
+					light: '#FEF9F5',
+					dark: '#7C2D12'
 				},
 				occupancy: {
 					low: 'var(--occupancy-low)',
@@ -163,6 +171,22 @@ export default {
 						transform: 'translateY(200%)',
 						opacity: '0' 
 					}
+				},
+				shimmer: {
+					'0%': { 
+						transform: 'translateX(-100%)' 
+					},
+					'100%': { 
+						transform: 'translateX(100%)' 
+					}
+				},
+				bounce: {
+					'0%, 100%': { 
+						transform: 'translateY(0)' 
+					},
+					'50%': { 
+						transform: 'translateY(-10px)' 
+					}
 				}
 			},
 			animation: {
@@ -177,15 +201,19 @@ export default {
 				'drop-1': 'dropFall 1.5s ease-in infinite 0.2s',
 				'drop-2': 'dropFall 1.5s ease-in infinite 0.8s',
 				'drop-3': 'dropFall 1.5s ease-in infinite 1.3s',
+				'shimmer': 'shimmer 2s linear infinite',
+				'bounce-slow': 'bounce 3s ease-in-out infinite',
 			},
 			backgroundImage: {
-				'gradient-water': 'linear-gradient(90deg, #0EA5E9 0%, #0D9488 50%, #0EA5E9 100%)',
-				'gradient-light': 'linear-gradient(145deg, #EFF6FF 0%, #E0F2FE 100%)'
+				'gradient-water': 'linear-gradient(90deg, #F97316 0%, #FBBF24 50%, #F97316 100%)',
+				'gradient-light': 'linear-gradient(145deg, #FEF9F5 0%, #FFF7ED 100%)',
+				'gradient-gold': 'linear-gradient(90deg, #B45309 0%, #FBBF24 50%, #92400E 100%)',
 			},
 			boxShadow: {
-				'card-hover': '0 10px 30px rgba(0, 0, 0, 0.15)',
-				'button-hover': '0 8px 25px rgba(14, 165, 233, 0.3)',
-				'soft': '0 4px 20px rgba(0, 0, 0, 0.08)'
+				'card-hover': '0 10px 30px rgba(249, 115, 22, 0.2)',
+				'button-hover': '0 8px 25px rgba(249, 115, 22, 0.25)',
+				'soft': '0 4px 20px rgba(249, 115, 22, 0.1)',
+				'gold': '0 5px 15px rgba(251, 191, 36, 0.3)'
 			},
 			transitionDuration: {
 				'300': '300ms',
